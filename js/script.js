@@ -786,53 +786,77 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
-  // ============================
+  (function () {
+  setTimeout(() => {
+    // ============================
     // DETECT DEVTOOLS (HALUS)
     // ============================
-    setInterval(function() {
+    setInterval(function () {
       const widthDiff = window.outerWidth - window.innerWidth;
       const heightDiff = window.outerHeight - window.innerHeight;
 
       if (widthDiff > 160 || heightDiff > 160) {
         console.clear();
-        console.log("Mau ngapain hayoo wkwk😛");
+        console.log(
+          "%c⚠️ akses developer tools terdeteksi",
+          "font-size:20px; font-weight:bold; color:red;"
+        );
+        console.log(
+          "%csource code website ini dilindungi.\ndilarang menyalin atau memodifikasi tanpa izin developer 😛",
+          "font-size:14px; color:orange;"
+        );
       }
     }, 1500);
-
   }, 1000); // delay biar aman
-
 })();
 
-// matiin klik kanan
+// ============================
+// MATIIN KLIK KANAN
+// ============================
 document.addEventListener("contextmenu", (e) => {
   e.preventDefault();
 });
 
-// matiin text selection
+// ============================
+// MATIIN TEXT SELECTION
+// ============================
 document.addEventListener("selectstart", (e) => {
   e.preventDefault();
 });
 
-// matiin copy
+// ============================
+// MATIIN COPY
+// ============================
 document.addEventListener("copy", (e) => {
   e.preventDefault();
 });
 
-// block shortcut inspect & view source
+// ============================
+// BLOCK SHORTCUT INSPECT & VIEW SOURCE
+// ============================
 document.addEventListener("keydown", (e) => {
+  const key = e.key.toLowerCase();
+
   // F12
   if (e.key === "F12") {
     e.preventDefault();
+    return false;
   }
 
-  // Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+U
+  // Ctrl+U
+  if (e.ctrlKey && key === "u") {
+    e.preventDefault();
+    alert("⚠️ source code website ini dilindungi.");
+    return false;
+  }
+
+  // Ctrl+Shift+I / J / C
   if (
     e.ctrlKey &&
-    (
-      e.key.toLowerCase() === "u" ||
-      (e.shiftKey && ["i", "j", "c"].includes(e.key.toLowerCase()))
-    )
+    e.shiftKey &&
+    ["i", "j", "c"].includes(key)
   ) {
     e.preventDefault();
+    return false;
   }
 });
