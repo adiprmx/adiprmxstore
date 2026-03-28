@@ -318,6 +318,7 @@ const samplePackProducts = [
         price: 50000,
         items: '525 File',
         size: '800 MB',
+        image: sampleCovers[0],
         audioUrl: '#'
     },
     {
@@ -327,6 +328,7 @@ const samplePackProducts = [
         price: 45000,
         items: '75 Snares',
         size: '30 MB',
+        image: sampleCovers[1],
         audioUrl: '#'
     },
     {
@@ -336,6 +338,7 @@ const samplePackProducts = [
         price: 40000,
         items: '100 Hi-Hats',
         size: '20 MB',
+        image: sampleCovers[2],
         audioUrl: '#'
     },
     {
@@ -345,6 +348,7 @@ const samplePackProducts = [
         price: 35000,
         items: '60 Claps',
         size: '15 MB',
+        image: sampleCovers[3],
         audioUrl: '#'
     },
     {
