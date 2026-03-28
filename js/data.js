@@ -34,12 +34,12 @@ const demoAudios = [
 const flmProducts = [
     {
         id: 'flm-001',
-        name: 'Funky House Project',
+        name: 'WE CANT BE FRIENDS JDM',
         category: 'FLM Project',
-        price: 75000,
-        bpm: 128,
-        key: 'F# Minor',
-        duration: '5:32',
+        price: 50000,
+        bpm: 135,
+        key: 'G Major',
+        duration: '3:04',
         image: flmCovers[0],
         audioUrl: demoAudios[0]
     },
