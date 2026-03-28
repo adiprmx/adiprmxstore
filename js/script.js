@@ -786,6 +786,23 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
+  // ============================
+    // DETECT DEVTOOLS (HALUS)
+    // ============================
+    setInterval(function() {
+      const widthDiff = window.outerWidth - window.innerWidth;
+      const heightDiff = window.outerHeight - window.innerHeight;
+
+      if (widthDiff > 160 || heightDiff > 160) {
+        console.clear();
+        console.log("Ngapain dibuka 😏");
+      }
+    }, 1500);
+
+  }, 1000); // delay biar aman
+
+})();
+
 // matiin klik kanan
 document.addEventListener("contextmenu", (e) => {
   e.preventDefault();
