@@ -785,3 +785,37 @@ document.addEventListener('keydown', function(e) {
         togglePlay();
     }
 });
+
+// matiin klik kanan
+document.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+});
+
+// matiin text selection
+document.addEventListener("selectstart", (e) => {
+  e.preventDefault();
+});
+
+// matiin copy
+document.addEventListener("copy", (e) => {
+  e.preventDefault();
+});
+
+// block shortcut inspect & view source
+document.addEventListener("keydown", (e) => {
+  // F12
+  if (e.key === "F12") {
+    e.preventDefault();
+  }
+
+  // Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+U
+  if (
+    e.ctrlKey &&
+    (
+      e.key.toLowerCase() === "u" ||
+      (e.shiftKey && ["i", "j", "c"].includes(e.key.toLowerCase()))
+    )
+  ) {
+    e.preventDefault();
+  }
+});
