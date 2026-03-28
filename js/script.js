@@ -397,7 +397,7 @@ function checkout() {
     
     cart.forEach((item, index) => {
         message += `${index + 1}. ${item.name}\n`;
-        message += `   Tipe: ${item.type}\n`;
+        message += `   Tipe: *${item.type}\n*`;
         message += `   Harga: ${formatPrice(item.price)}\n\n`;
     });
     
