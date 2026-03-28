@@ -6,13 +6,13 @@
 const flmProducts = [
     {
         id: 'flm-001',
-        name: 'Funky House Project',
+        name: 'WE CANT BE FRIENDS JDM',
         category: 'FLM Project',
         price: 65000,
-        bpm: 128,
-        key: 'F# Minor',
+        bpm: 135,
+        key: 'G Major',
         duration: '3:04',
-        audioUrl: 'https://s19.aconvert.com/convert/p3r68-cdx67/1m9no-0m15d.mp3'
+        audioUrl: 'https://mp3tourl.com/audio/1774687396409-d29cfda0-794a-4184-b6bb-c1b82e2186c5.mp3'
     },
     {
         id: 'flm-002',
