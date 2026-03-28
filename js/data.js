@@ -8,10 +8,10 @@ const flmProducts = [
         id: 'flm-001',
         name: 'Funky House Project',
         category: 'FLM Project',
-        price: 75000,
+        price: 65000,
         bpm: 128,
         key: 'F# Minor',
-        duration: '5:32',
+        duration: '3:04',
         audioUrl: 'https://s19.aconvert.com/convert/p3r68-cdx67/1m9no-0m15d.mp3'
     },
     {
