@@ -795,7 +795,7 @@ document.addEventListener('keydown', function(e) {
 
       if (widthDiff > 160 || heightDiff > 160) {
         console.clear();
-        console.log("Ngapain dibuka 😏");
+        console.log("Mau ngapain hayoo wkwk😛");
       }
     }, 1500);
 
