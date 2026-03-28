@@ -313,11 +313,11 @@ const flmProducts = [
 const samplePackProducts = [
     {
         id: 'sp-001',
-        name: 'Essential Kicks Vol.1',
+        name: 'NANG 8THRILL - SAMPLE PACK LITE',
         category: 'Sample Pack',
         price: 50000,
-        items: '50 Kicks',
-        size: '25 MB',
+        items: '525 File',
+        size: '800 MB',
         audioUrl: '#'
     },
     {
