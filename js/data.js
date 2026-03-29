@@ -45,7 +45,7 @@ const flmProducts = [
     },
     {
         id: 'flm-002',
-        name: 'Tribal Groove Remix',
+        name: 'TELAHAPE JOS JIS',
         category: 'FLM Project',
         price: 80000,
         bpm: 135,
