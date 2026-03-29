@@ -27,7 +27,7 @@ const demoAudios = [
     'https://res.cloudinary.com/drlb0d6vq/video/upload/v1774759271/TELAHAPE_JOS_JIS_STYLE_DEMO_-_ADIP_RMX_bfupg1.mp3', // 1
     'https://res.cloudinary.com/drlb0d6vq/video/upload/v1774772390/PRICE_TAG_ENAFF_STYLE_DEMO_-_ADIP_RMX_cznqv9.mp3', // 2
     'https://res.cloudinary.com/drlb0d6vq/video/upload/v1774773555/MAUNYA_DIGOYANG_DJ_TEBANG_STYLE_DEMO_-_ADIP_RMX_vxlima.mp3', // 3
-    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 4
+    'https://res.cloudinary.com/drlb0d6vq/video/upload/v1774776453/FIREWORK_UCIL_FVNKY_STYLE_DEMO_-_ADIP_RMX_yfl5j6.mp3', // 4
     'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 5
     'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 6
     'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 7
@@ -115,9 +115,9 @@ const flmProducts = [
     },
     {
         id: 'flm-005',
-        name: 'Latin Vibes Project',
+        name: 'FIREWORK UCIL FVNKY',
         category: 'FLM Project',
-        price: 80000,
+        price: 50000,
         bpm: 126,
         key: 'C Minor',
         duration: '5:50',
