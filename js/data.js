@@ -25,7 +25,7 @@ const sampleCovers = [
 const demoAudios = [
     'https://res.cloudinary.com/drlb0d6vq/video/upload/v1774704040/WE_CAN_T_BE_FRIENDS_JDM_DEMO_-_ADIP_RMX_wub78h.mp3', // 0
     'https://res.cloudinary.com/drlb0d6vq/video/upload/v1774759271/TELAHAPE_JOS_JIS_STYLE_DEMO_-_ADIP_RMX_bfupg1.mp3', // 1
-    'https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3', // 2
+    'https://res.cloudinary.com/drlb0d6vq/video/upload/v1774772390/PRICE_TAG_ENAFF_STYLE_DEMO_-_ADIP_RMX_cznqv9.mp3', // 2
     'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 3
     'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 4
     'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 5
@@ -73,7 +73,7 @@ const flmProducts = [
         id: 'flm-001',
         name: 'WE CANT BE FRIENDS JDM',
         category: 'FLM Project',
-        price: 60000,
+        price: 70000,
         bpm: 135,
         key: 'G Major',
         duration: '3:04',
@@ -93,12 +93,12 @@ const flmProducts = [
     },
     {
         id: 'flm-003',
-        name: 'Deep Bass Edition',
+        name: 'PRICE TAG ENAFF',
         category: 'FLM Project',
-        price: 70000,
-        bpm: 122,
-        key: 'A Minor',
-        duration: '5:45',
+        price: 85000,
+        bpm: 138,
+        key: 'F Major',
+        duration: '3:11',
         image: flmCovers[2],
         audioUrl: demoAudios[2]
     },
