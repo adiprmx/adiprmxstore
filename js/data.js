@@ -23,8 +23,8 @@ const sampleCovers = [
 
 // Demo audio URLs (using free music from Pixabay as examples)
 const demoAudios = [
-    'https://res.cloudinary.com/drlb0d6vq/video/upload/v1774704040/WE_CAN_T_BE_FRIENDS_JDM_DEMO_-_ADIP_RMX_wub78h.mp3', // 1
-    'https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3', // 2
+    'https://res.cloudinary.com/drlb0d6vq/video/upload/v1774704040/WE_CAN_T_BE_FRIENDS_JDM_DEMO_-_ADIP_RMX_wub78h.mp3', // 0
+    'https://res.cloudinary.com/drlb0d6vq/video/upload/v1774759271/TELAHAPE_JOS_JIS_STYLE_DEMO_-_ADIP_RMX_bfupg1.mp3', // 2
     'https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3', // 3
     'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 4
     'https://cdn.pixabay.com/download/audio/2021/09/06/audio_278c4c59c1.mp3'
