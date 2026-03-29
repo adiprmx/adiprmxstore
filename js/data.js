@@ -26,7 +26,7 @@ const demoAudios = [
     'https://res.cloudinary.com/drlb0d6vq/video/upload/v1774704040/WE_CAN_T_BE_FRIENDS_JDM_DEMO_-_ADIP_RMX_wub78h.mp3', // 0
     'https://res.cloudinary.com/drlb0d6vq/video/upload/v1774759271/TELAHAPE_JOS_JIS_STYLE_DEMO_-_ADIP_RMX_bfupg1.mp3', // 1
     'https://res.cloudinary.com/drlb0d6vq/video/upload/v1774772390/PRICE_TAG_ENAFF_STYLE_DEMO_-_ADIP_RMX_cznqv9.mp3', // 2
-    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 3
+    'https://res.cloudinary.com/drlb0d6vq/video/upload/v1774773555/MAUNYA_DIGOYANG_DJ_TEBANG_STYLE_DEMO_-_ADIP_RMX_vxlima.mp3', // 3
     'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 4
     'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 5
     'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 6
@@ -104,12 +104,12 @@ const flmProducts = [
     },
     {
         id: 'flm-004',
-        name: 'Electro Dance Mix',
+        name: 'MAUNYA DIGOYANG DJ TEBANG',
         category: 'FLM Project',
-        price: 90000,
-        bpm: 130,
-        key: 'D Major',
-        duration: '6:30',
+        price: 50000,
+        bpm: 120,
+        key: 'F Major',
+        duration: '2:19',
         image: flmCovers[3],
         audioUrl: demoAudios[3]
     },
