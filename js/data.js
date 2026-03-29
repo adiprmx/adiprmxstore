@@ -36,7 +36,7 @@ const flmProducts = [
         id: 'flm-001',
         name: 'WE CANT BE FRIENDS JDM',
         category: 'FLM Project',
-        price: 50000,
+        price: 60000,
         bpm: 135,
         key: 'G Major',
         duration: '3:04',
