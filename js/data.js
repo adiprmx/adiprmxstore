@@ -24,9 +24,46 @@ const sampleCovers = [
 // Demo audio URLs (using free music from Pixabay as examples)
 const demoAudios = [
     'https://res.cloudinary.com/drlb0d6vq/video/upload/v1774704040/WE_CAN_T_BE_FRIENDS_JDM_DEMO_-_ADIP_RMX_wub78h.mp3', // 0
-    'https://res.cloudinary.com/drlb0d6vq/video/upload/v1774759271/TELAHAPE_JOS_JIS_STYLE_DEMO_-_ADIP_RMX_bfupg1.mp3', // 2
-    'https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3', // 3
+    'https://res.cloudinary.com/drlb0d6vq/video/upload/v1774759271/TELAHAPE_JOS_JIS_STYLE_DEMO_-_ADIP_RMX_bfupg1.mp3', // 1
+    'https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3', // 2
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 3
     'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 4
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 5
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 6
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 7
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 8
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 9
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 10
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 11
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 12
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 13
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 14
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 15
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 16
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 17
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 18
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 19
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 20
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 21
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 22
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 23
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 24
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 25
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 26
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 27
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 28
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 29
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 30
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 31
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 32
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 33
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 34
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 35
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 36
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 37
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 38
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 39
+    'https://cdn.pixabay.com/download/audio/2021/11/25/audio_5f5f6c71c6.mp3', // 40
     'https://cdn.pixabay.com/download/audio/2021/09/06/audio_278c4c59c1.mp3'
 ];
 
