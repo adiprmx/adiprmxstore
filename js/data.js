@@ -118,8 +118,8 @@ const flmProducts = [
         name: 'FIREWORK UCIL FVNKY',
         category: 'FLM Project',
         price: 50000,
-        bpm: 126,
-        key: 'C Minor',
+        bpm: 140,
+        key: 'A Minor',
         duration: '5:50',
         image: flmCovers[4],
         audioUrl: demoAudios[4]
