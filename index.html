@@ -681,6 +681,14 @@
   // 4. Mencegah Seleksi Teks (Opsional)
   document.addEventListener('selectstart', e => e.preventDefault());
     </script>
-    
+    <script>
+        
+  // Mencegah select teks (biar susah copy-paste di HP)
+  document.addEventListener('selectstart', e => e.preventDefault());
+  
+  // Mengunci klik kanan (tetap dipasang buat jaga-jaga kalau user pakai mouse di HP/tablet)
+  document.addEventListener('contextmenu', e => e.preventDefault());
+    </script>
+        
 </body>
 </html>
