@@ -632,5 +632,55 @@
 
     <script src="js/data.js"></script>
     <script src="js/script.js"></script>
+    
+    <!-- Block Inspect Element -->
+    <script>
+  // 1. Matikan Klik Kanan
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  }, false);
+
+  // 2. Matikan Shortcut Keyboard (F12, Ctrl+Shift+I, Ctrl+U, dll)
+  document.onkeydown = function(e) {
+    // Disable F12
+    if (e.keyCode == 123) return false;
+    
+    // Disable Ctrl + Shift + I
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
+    
+    // Disable Ctrl + Shift + C
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false;
+    
+    // Disable Ctrl + Shift + J
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
+    
+    // Disable Ctrl + U
+    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
+    
+    // Disable Ctrl + S (Save Page)
+    if (e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) return false;
+  };
+
+  // 3. Deteksi Debugger (Jika user buka Inspect Element, otomatis redirect/hapus konten)
+  (function() {
+    function detectDevTool() {
+      const threshold = 160;
+      const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+      const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+      
+      if (widthThreshold || heightThreshold) {
+        document.body.innerHTML = "<h1>Akses Dilarang!</h1>";
+        window.location.href = "about:blank"; // Redirect ke halaman kosong
+      }
+    }
+    
+    // Cek berkala setiap 1 detik
+    setInterval(detectDevTool, 1000);
+  })();
+
+  // 4. Mencegah Seleksi Teks (Opsional)
+  document.addEventListener('selectstart', e => e.preventDefault());
+    </script>
+    
 </body>
 </html>
