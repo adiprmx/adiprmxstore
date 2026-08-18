@@ -14,7 +14,7 @@
    4. Jika promo berakhir -> semua harga otomatis kembali normal di semua
       perangkat (tanpa perlu deploy ulang).
    ----------------------------------------------------------------------------
-   WAJIB DIISI: FIREBASE_DB_URL di bawah ini (lihat PANDUAN-INSTALASI.md)
+   WAJIB DIISI: FIREBASE_DATABASE_URL di bawah ini (lihat PANDUAN-INSTALASI.md)
    ============================================================================ */
 (function () {
   'use strict';
@@ -22,15 +22,15 @@
   var CONFIG = {
     // GANTI dengan URL Realtime Database Anda, contoh:
     // 'https://adiprmx-store-default-rtdb.asia-southeast1.firebasedatabase.app'
-    FIREBASE_DB_URL: 'https://adip-promo-default-rtdb.asia-southeast1.firebasedatabase.app',
+    FIREBASE_DATABASE_URL: 'https://adip-promo-default-rtdb.asia-southeast1.firebasedatabase.app',
     PROMO_PATH: '/promo.json',       // node tempat admin menyimpan promo
     REFETCH_PROMO: 30 * 1000,        // cek ulang data promo tiap 30 detik
     RESYNC_SERVER_TIME: 5 * 60 * 1000 // sinkron ulang jam server tiap 5 menit
   };
 
   // Jika URL belum diisi, engine diam saja (situs tampil normal).
-  if (!CONFIG.FIREBASE_DB_URL || CONFIG.FIREBASE_DB_URL.indexOf('adip-promo') !== -1) {
-    console.info('[PromoEngine] FIREBASE_DB_URL belum diisi. Engine nonaktif.');
+  if (!CONFIG.FIREBASE_DATABASE_URL || CONFIG.FIREBASE_DATABASE_URL.indexOf('adip-promo') !== -1) {
+    console.info('[PromoEngine] FIREBASE_DATABASE_URL belum diisi. Engine nonaktif.');
     return;
   }
 
@@ -83,7 +83,7 @@
      DATA PROMO (Firebase Realtime Database - REST API)
      ------------------------------------------------------------------------ */
   function fetchPromo() {
-    var url = CONFIG.FIREBASE_DB_URL.replace(/\/+$/, '') + CONFIG.PROMO_PATH;
+    var url = CONFIG.FIREBASE_DATABASE_URL.replace(/\/+$/, '') + CONFIG.PROMO_PATH;
     return fetch(url, { cache: 'no-store' })
       .then(function (res) { return res.ok ? res.json() : null; })
       .catch(function () { return null; });
