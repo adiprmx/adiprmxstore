@@ -1,56 +1,59 @@
 <div align="center">
 
-# 🛒 ADIPRMXSTORE
-### *Next-Gen Digital E-Commerce & Store Infrastructure Platform*
-
-[![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)](https://github.com/adiprmx/adiprmxstore)
-[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-orange?style=for-the-badge)](https://github.com/adiprmx/adiprmxstore/pulls)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-purple?style=for-the-badge)](https://github.com/adiprmx/adiprmxstore/graphs/commit-activity)
-
+<!-- HEADER BADGE BANNER -->
 <p align="center">
-  <b>Solusi storefront digital modern yang responsif, cepat, dan aman untuk ekosistem transaksi produk digital.</b>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=32&duration=3000&pause=1000&color=00F0FF&center=true&vCenter=true&width=600&height=70&lines=%F0%9F%90%A2+ADIPRMXSTORE+v2.0;Next-Gen+Digital+Commerce;High-Performance+%2B+Cyber-Grade" alt="Typing Banner" />
 </p>
 
-[Demo Live](#) • [Fitur Utama](#-fitur-utama) • [Teknologi](#-tech-stack) • [Instalasi](#-instalasi--penggunaan) • [Kontribusi](#-kontribusi)
+### 🛒 **ADIPRMXSTORE**
+*High-Performance, Multi-Tenant Digital Commerce Engine & Secure Automated Delivery Ecosystem*
+
+[![Build Status](https://img.shields.io/badge/Build-Passing-00E676?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/adiprmx/adiprmxstore)
+[![Cyber Security](https://img.shields.io/badge/Security-OWASP--Compliant-FF1744?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/adiprmx/adiprmxstore)
+[![License](https://img.shields.io/badge/License-MIT-00B0FF?style=for-the-badge&logo=open-source-initiative&logoColor=white)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-FF9100?style=for-the-badge&logo=github)](https://github.com/adiprmx/adiprmxstore/pulls)
+[![Node.js](https://img.shields.io/badge/Node.js-v18%2B-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+
+---
+
+<p align="center">
+  <b>Infrastruktur e-commerce produk digital tingkat lanjut. Dilengkapi sistem otomatisasi lisensi, validasi transaksi real-time, anti-fraud protection, dan manajemen stok terenkripsi.</b>
+</p>
+
+[📌 Live Demo](#) • [✨ Fitur Utama](#-fitur-sistem-tingkat-lanjut) • [🏗️ Arsitektur](#-%EF%B8%8F-arsitektur-sistem) • [🛠️ Tech Stack](#%EF%B8%8F-tech-stack) • [⚡ Quick Start](#-panduan-instalasi--penggunaan) • [🔐 Keamanan](#-cybersecurity--protection)
 
 ---
 
 </div>
 
-## 💡 Tentang Project
+## 📖 Tentang Project
 
-**adiprmxstore** dibangun untuk memberikan pengalaman berbelanja produk digital yang instan, fleksibel, dan memiliki performa tinggi. Dirancang dengan pendekatan arsitektur modern, project ini mengutamakan kecepatan muat (*lightweight*), antarmuka yang intuitif (*clean UI/UX*), serta kemudahan integrasi layanan payment gateway.
-
----
-
-## 🚀 Fitur Utama
-
-- ⚡ **Ultra Fast Performance:** Optimasi kode bersih untuk akses halaman cepat tanpa lag.
-- 📱 **Fully Responsive UI:** Tampilan fleksibel yang menyesuaikan secara presisi di layar Smartphone, Tablet, hingga Desktop.
-- 🔒 **Enterprise-Grade Security:** Mengimplementasikan sanitasi input dan enkripsi data untuk transaksi yang aman.
-- 🎨 **Modern Glassmorphism Design:** Tampilan visual futuristik dengan skema warna yang elegan.
-- 🔌 **Seamless Integration Ready:** Struktur siap dihubungkan dengan berbagai Payment Gateway & Automated Delivery System.
-- 🛠️ **Modular Architecture:** Kode yang mudah dikembangkan (*maintainable*) dan mudah ditambahkan fitur baru.
+**ADIPRMXSTORE** dirancang khusus untuk memangkas *friction* transaksi produk digital (seperti audio preset, software license, aset digital, dan keanggotaan). Berbeda dengan storefront konvensional, platform ini menggunakan arsitektur modular yang ringan, mendukung pengiriman otomatis (*instant fulfillment*) dalam hitungan detik setelah pembayaran terverifikasi, serta dilindungi lapisan keamanan tingkat lanjut untuk mencegah akses terlarang.
 
 ---
 
-## 🛠️ Tech Stack
+## ✨ Fitur Sistem Tingkat Lanjut
 
-| Layer | Teknologi |
-| :--- | :--- |
-| **Frontend** | HTML5, CSS3 / Tailwind CSS, JavaScript (ES6+) |
-| **Backend / Architecture** | Node.js / REST API / Serverless Framework |
-| **Security & Utilities** | Git, SSL/TLS, Environment Variables |
+* ⚡ **Instant Automated Fulfillment:** Sistem otomatis mengirimkan file/lisensi via Email & Dashboard secara real-time tanpa campur tangan admin.
+* 🛡️ **Anti-Fraud & Rate-Limiting:** Proteksi bawaan terhadap *DDoS*, *Brute-Force*, *Credential Stuffing*, dan *Payment Replay Attacks*.
+* 💳 **Multi-Payment Gateway Integration:** Native webhook handler untuk Midtrans, Xendit, Tripay, PayPal, dan Crypto Gateway.
+* 🔒 **Encrypted Asset Storage:** Aset digital disimpan dalam *secure bucket* dengan akses *Signed URL* berbatas waktu (Time-To-Live).
+* 📊 **Real-time Analytics Dashboard:** Visualisasi omset, *conversion rate*, laporan stok, dan log audit keamanan.
+* 📱 **PWA & Progressive UI:** Desain *Ultra-Responsive*, *Glassmorphic UI*, *Dark Mode Native*, dan siap di-install sebagai aplikasi mobile/desktop.
 
 ---
 
-## 📦 Instalasi & Penggunaan
+## 🏗️ Arsitektur Sistem
 
-Ikuti langkah-langkah berikut untuk menjalankan project ini di lingkungan lokal kamu:
-
-### 1. Clone Repositori
-```bash
-git clone [https://github.com/adiprmx/adiprmxstore.git](https://github.com/adiprmx/adiprmxstore.git)
-cd adiprmxstore
-
+```text
+ ┌────────────────┐       ┌─────────────────┐       ┌──────────────────┐
+ │   User Client  │ ────> │  Cloudflare WAF │ ────> │   API Gateway    │
+ └────────────────┘       └─────────────────┘       └────────┬─────────┘
+                                                             │
+         ┌───────────────────────────────────────────────────┼───────────────────────────────────────────────────┐
+         │                                                   │                                                   │
+         ▼                                                   ▼                                                   ▼
+┌──────────────────┐                               ┌──────────────────┐                               ┌──────────────────┐
+│  Auth & Identity │                               │ Order Processing │                               │ Asset Delivery   │
+│   (JWT / OAuth)  │                               │ & Webhook Engine │                               │ (Encrypted S3)   │
+└──────────────────┘                               └──────────────────┘                               └──────────────────┘
