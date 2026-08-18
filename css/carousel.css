@@ -1,0 +1,161 @@
+/* ========================================
+   Adip Lowkey - Carousel Styles
+   Tema: Black, White, Gray (match style.css)
+   Ringan: animasi hanya transform & opacity
+   ======================================== */
+
+.gallery-section {
+    padding: 60px 0 40px;
+    background: var(--color-black);
+}
+
+.carousel {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    background: var(--color-black-light);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: var(--shadow-lg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: pan-y; /* vertikal tetap bisa scroll, horizontal untuk swipe */
+}
+
+.carousel-viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.45s cubic-bezier(0.25, 0.8, 0.25, 1);
+    will-change: transform;
+}
+
+.carousel-track.dragging {
+    transition: none;
+}
+
+.carousel-slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: var(--color-black-lighter);
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+}
+
+.carousel-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 40px 24px 18px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+    color: var(--color-white);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Navigasi panah — tampil di desktop, disembunyikan di layar kecil */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(10, 10, 10, 0.6);
+    backdrop-filter: blur(8px);
+    color: var(--color-white);
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+    z-index: 5;
+}
+
+.carousel-arrow:hover {
+    background: var(--color-white);
+    color: var(--color-black);
+    transform: translateY(-50%) scale(1.08);
+}
+
+.carousel-prev { left: 16px; }
+.carousel-next { right: 16px; }
+
+/* Dots */
+.carousel-dots {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 5;
+}
+
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-full);
+    border: none;
+    background: rgba(255, 255, 255, 0.35);
+    cursor: pointer;
+    padding: 0;
+    transition: var(--transition-fast);
+}
+
+.carousel-dot.active {
+    background: var(--color-white);
+    width: 22px;
+    border-radius: 4px;
+}
+
+/* Counter */
+.carousel-counter {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: rgba(10, 10, 10, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--color-gray-300);
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 5;
+}
+
+.carousel-counter .cc-current {
+    color: var(--color-white);
+}
+
+/* Mobile: panah disembunyikan, navigasi via swipe */
+@media (max-width: 768px) {
+    .carousel-arrow {
+        display: none;
+    }
+    .carousel-slide {
+        aspect-ratio: 1 / 1;
+    }
+    .carousel-caption {
+        font-size: 0.9rem;
+        padding: 32px 18px 14px;
+    }
+}
