@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Panel tersembunyi: tidak dilink dari mana pun & tidak diindeks Google -->
+    <meta name="robots" content="noindex, nofollow">
+    <title>Admin Panel — ADIP RMX</title>
+    <link rel="icon" href="images/logo-adip.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --card: #111111;
+            --card-2: #1a1a1a;
+            --border: #262626;
+            --text: #ffffff;
+            --muted: #aaaaaa;
+            --red: #ef4444;
+            --red-dark: #dc2626;
+            --green: #22c55e;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .panel {
+            width: 100%;
+            max-width: 460px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 20px 60px rgba(0,0,0,.6);
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        .brand img {
+            width: 44px; height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid var(--border);
+        }
+        .brand h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: .5px;
+        }
+        .brand p { font-size: 12px; color: var(--muted); }
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            margin: 24px 0 14px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--muted);
+            margin: 14px 0 6px;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+        }
+        input {
+            width: 100%;
+            background: var(--card-2);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px 14px;
+            color: var(--text);
+            font-family: inherit;
+            font-size: 14px;
+            outline: none;
+            transition: border-color .2s ease;
+        }
+        input:focus { border-color: var(--red); }
+        input[type="date"], input[type="time"] { color-scheme: dark; }
+        .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        button {
+            width: 100%;
+            margin-top: 18px;
+            background: var(--red-dark);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 13px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform .15s ease, background .2s ease;
+        }
+        button:hover { background: var(--red); transform: translateY(-1px); }
+        button:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+        button.secondary { background: var(--card-2); border: 1px solid var(--border); }
+        button.secondary:hover { background: var(--border); }
+        .msg {
+            margin-top: 16px;
+            padding: 12px 14px;
+            border-radius: 10px;
+            font-size: 13px;
+            display: none;
+        }
+        .msg.error { display: block; background: rgba(239,68,68,.12); border: 1px solid rgba(239,68,68,.4); color: #fca5a5; }
+        .msg.success { display: block; background: rgba(34,197,94,.12); border: 1px solid rgba(34,197,94,.4); color: #86efac; }
+        .status-card {
+            background: var(--card-2);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            font-size: 13px;
+            line-height: 1.9;
+        }
+        .status-card .live { color: var(--green); font-weight: 700; }
+        .status-card .off { color: var(--muted); font-weight: 700; }
+        .hidden { display: none; }
+        .hint { font-size: 11px; color: var(--muted); margin-top: 6px; }
+        .tz-note {
+            margin-top: 4px;
+            font-size: 11px;
+            color: #fca5a5;
+            background: rgba(239,68,68,.08);
+            border: 1px dashed rgba(239,68,68,.35);
+            border-radius: 8px;
+            padding: 8px 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== TAMPILAN LOGIN ==================== -->
+    <div class="panel" id="loginView">
+        <div class="brand">
+            <img src="images/logo-adip.png" alt="ADIP RMX">
+            <div>
+                <h1>ADIP RMX</h1>
+                <p>Admin Panel — Promo Engine</p>
+            </div>
+        </div>
+
+        <h2><i class="fas fa-lock"></i> Login Admin</h2>
+        <form id="loginForm">
+            <label for="pin">PIN Admin</label>
+            <input type="password" id="pin" inputmode="numeric" autocomplete="off"
+                   placeholder="Masukkan PIN rahasia" required>
+            <button type="submit" id="loginBtn">
+                <i class="fas fa-right-to-bracket"></i> Masuk
+            </button>
+        </form>
+        <div class="msg" id="loginMsg"></div>
+    </div>
+
+    <!-- ==================== TAMPILAN PANEL ==================== -->
+    <div class="panel hidden" id="panelView">
+        <div class="brand">
+            <img src="images/logo-adip.png" alt="ADIP RMX">
+            <div>
+                <h1>ADIP RMX</h1>
+                <p>Promo Engine — Kontrol Diskon Global</p>
+            </div>
+        </div>
+
+        <h2><i class="fas fa-satellite-dish"></i> Promo Saat Ini</h2>
+        <div class="status-card" id="promoStatus">Memuat status promo...</div>
+        <button class="secondary" id="clearBtn" type="button">
+            <i class="fas fa-stop"></i> Nonaktifkan Promo Sekarang
+        </button>
+
+        <h2><i class="fas fa-tags"></i> Buat / Jadwalkan Promo Baru</h2>
+        <form id="promoForm">
+            <label for="promoName">Nama Promo</label>
+            <input type="text" id="promoName" placeholder="Contoh: FLASH SALE KEMERDEKAAN" required>
+
+            <label for="discount">Diskon (%)</label>
+            <input type="number" id="discount" min="1" max="99" step="1"
+                   placeholder="Contoh: 20" required>
+
+            <label>Tanggal &amp; Jam Mulai</label>
+            <div class="row">
+                <input type="date" id="startDate" required>
+                <input type="time" id="startTime" required>
+            </div>
+
+            <label>Tanggal &amp; Jam Selesai</label>
+            <div class="row">
+                <input type="date" id="endDate" required>
+                <input type="time" id="endTime" required>
+            </div>
+
+            <div class="tz-note">
+                <i class="fas fa-clock"></i> Semua tanggal &amp; jam di atas dianggap
+                <b>WIB (UTC+7)</b> dan dibandingkan dengan <b>jam server Vercel</b> —
+                pengunjung tidak bisa mengakali lewat jam HP.
+            </div>
+
+            <button type="submit" id="saveBtn">
+                <i class="fas fa-rocket"></i> Simpan &amp; Aktifkan Promo
+            </button>
+        </form>
+        <div class="msg" id="saveMsg"></div>
+
+        <button class="secondary" id="logoutBtn" type="button">
+            <i class="fas fa-right-from-bracket"></i> Keluar
+        </button>
+    </div>
+
+<script>
+(function () {
+    'use strict';
+
+    /* ========================================================================
+       WAJIB SAMA dengan yang ada di js/promo-engine.js
+       ======================================================================== */
+    var FIREBASE_DB_URL = 'https://PROJECT-KAMU-default-rtdb.asia-southeast1.firebasedatabase.app';
+
+    var TOKEN_KEY = 'adiprmx_admin_token';
+
+    var loginView  = document.getElementById('loginView');
+    var panelView  = document.getElementById('panelView');
+    var loginForm  = document.getElementById('loginForm');
+    var loginMsg   = document.getElementById('loginMsg');
+    var promoForm  = document.getElementById('promoForm');
+    var saveMsg    = document.getElementById('saveMsg');
+    var statusCard = document.getElementById('promoStatus');
+
+    function showMsg(el, text, ok) {
+        el.textContent = text;
+        el.className = 'msg ' + (ok ? 'success' : 'error');
+    }
+
+    function getToken() { return sessionStorage.getItem(TOKEN_KEY); }
+
+    function showPanel() {
+        loginView.classList.add('hidden');
+        panelView.classList.remove('hidden');
+        loadStatus();
+    }
+
+    /* ---------------- LOGIN ---------------- */
+    loginForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var btn = document.getElementById('loginBtn');
+        btn.disabled = true;
+        fetch('/api/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ pin: document.getElementById('pin').value })
+        })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+            if (data.success && data.token) {
+                sessionStorage.setItem(TOKEN_KEY, data.token);
+                showPanel();
+            } else {
+                showMsg(loginMsg, data.message || 'PIN salah.', false);
+            }
+        })
+        .catch(function () {
+            showMsg(loginMsg, 'Gagal menghubungi server. Coba lagi.', false);
+        })
+        .finally(function () { btn.disabled = false; });
+    });
+
+    /* ---------------- STATUS PROMO (baca publik dari Firebase) ---------------- */
+    function loadStatus() {
+        if (FIREBASE_DB_URL.indexOf('PROJECT-KAMU') !== -1) {
+            statusCard.innerHTML = '<span class="off">FIREBASE_DB_URL belum diisi di admin.html</span>';
+            return;
+        }
+        fetch(FIREBASE_DB_URL.replace(/\/+$/, '') + '/promo.json', { cache: 'no-store' })
+            .then(function (r) { return r.json(); })
+            .then(function (p) {
+                if (!p) {
+                    statusCard.innerHTML = '<span class="off">TIDAK ADA PROMO</span> — semua harga normal.';
+                    return;
+                }
+                var now = Date.now();
+                var s = new Date(p.start).getTime();
+                var e2 = new Date(p.end).getTime();
+                var state = (now >= s && now <= e2)
+                    ? '<span class="live">SEDANG AKTIF</span>'
+                    : (now < s ? '<span class="off">TERJADWAL</span>' : '<span class="off">BERAKHIR</span>');
+                statusCard.innerHTML =
+                    state + '<br>' +
+                    '<b>' + (p.name || '-') + '</b> — Diskon <b>' + p.discount + '%</b><br>' +
+                    'Mulai&nbsp;&nbsp;: ' + new Date(p.start).toLocaleString('id-ID', { timeZone: 'Asia/Jakarta' }) + ' WIB<br>' +
+                    'Selesai: ' + new Date(p.end).toLocaleString('id-ID', { timeZone: 'Asia/Jakarta' }) + ' WIB';
+            })
+            .catch(function () {
+                statusCard.innerHTML = '<span class="off">Gagal membaca status promo.</span>';
+            });
+    }
+
+    /* ---------------- SIMPAN PROMO ---------------- */
+    promoForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var btn = document.getElementById('saveBtn');
+        btn.disabled = true;
+
+        // Rakit ISO string dengan offset WIB (UTC+7) secara eksplisit,
+        // sehingga benar walau laptop/HP admin sedang tidak di zona WIB.
+        var start = document.getElementById('startDate').value + 'T' + document.getElementById('startTime').value + ':00+07:00';
+        var end   = document.getElementById('endDate').value   + 'T' + document.getElementById('endTime').value   + ':00+07:00';
+
+        var payload = {
+            token: getToken(),
+            promo: {
+                name: document.getElementById('promoName').value.trim(),
+                discount: parseInt(document.getElementById('discount').value, 10),
+                start: start,
+                end: end
+            }
+        };
+
+        fetch('/api/save-promo', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+            if (data.success) {
+                showMsg(saveMsg, data.message || 'Promo tersimpan!', true);
+                loadStatus();
+            } else {
+                showMsg(saveMsg, data.message || 'Gagal menyimpan promo.', false);
+                if (/token/i.test(data.message || '')) logout();
+            }
+        })
+        .catch(function () {
+            showMsg(saveMsg, 'Gagal menghubungi server. Coba lagi.', false);
+        })
+        .finally(function () { btn.disabled = false; });
+    });
+
+    /* ---------------- NONAKTIFKAN PROMO ---------------- */
+    document.getElementById('clearBtn').addEventListener('click', function () {
+        if (!confirm('Nonaktifkan promo? Semua harga langsung kembali normal.')) return;
+        fetch('/api/save-promo', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ token: getToken(), clear: true })
+        })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+            showMsg(saveMsg, data.message || '', !!data.success);
+            loadStatus();
+        })
+        .catch(function () {
+            showMsg(saveMsg, 'Gagal menghubungi server.', false);
+        });
+    });
+
+    /* ---------------- LOGOUT ---------------- */
+    function logout() {
+        sessionStorage.removeItem(TOKEN_KEY);
+        panelView.classList.add('hidden');
+        loginView.classList.remove('hidden');
+    }
+    document.getElementById('logoutBtn').addEventListener('click', logout);
+
+    // Jika token sesi masih ada, langsung masuk panel
+    if (getToken()) showPanel();
+})();
+</script>
+</body>
+</html>
