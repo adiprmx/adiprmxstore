@@ -29,7 +29,7 @@
   };
 
   // Jika URL belum diisi, engine diam saja (situs tampil normal).
-  if (!CONFIG.FIREBASE_DATABASE_URL || CONFIG.FIREBASE_DATABASE_URL.indexOf('adip-promo') !== -1) {
+  if (!CONFIG.FIREBASE_DATABASE_URL || CONFIG.FIREBASE_DATABASE_URL.indexOf('https://adip-promo-default-rtdb.asia-southeast1.firebasedatabase.app') !== -1) {
     console.info('[PromoEngine] FIREBASE_DATABASE_URL belum diisi. Engine nonaktif.');
     return;
   }
