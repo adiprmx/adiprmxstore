@@ -29,7 +29,7 @@
   };
 
   // Jika URL belum diisi, engine diam saja (situs tampil normal).
-  if (!CONFIG.FIREBASE_DB_URL || CONFIG.FIREBASE_DB_URL.indexOf('adip-promo') !== -1) {
+  if (!CONFIG.FIREBASE_DB_URL) {
     console.info('[PromoEngine] FIREBASE_DB_URL belum diisi. Engine nonaktif.');
     return;
   }
