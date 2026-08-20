@@ -30,7 +30,7 @@ const googleProvider = new firebase.auth.GoogleAuthProvider();
 // supaya tombol "Dashboard Admin" muncul otomatis di modal member.
 // ----------------------------------------
 const ADMIN_EMAILS = [
-    "adiprmxstore@gmail.com"
+    "adiprmx@gmail.com"
 ];
 
 // Variabel global yang bisa dipakai script.js lain untuk auto-fill, dsb.
