@@ -1,0 +1,9 @@
+{
+  "name": "adiprmx-store",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ADIP RMX Official Store + Promo Engine (Vercel Serverless + Firebase RTDB)",
+  "dependencies": {
+    "firebase-admin": "^12.6.0"
+  }
+}
